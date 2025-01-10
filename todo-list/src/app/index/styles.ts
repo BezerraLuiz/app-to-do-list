@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
   titleList: {
     fontSize: 30,
     fontWeight: 600,
+    marginTop: 15,
   },
   divisorTitle: {
     width: "30%",

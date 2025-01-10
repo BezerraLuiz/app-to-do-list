@@ -36,8 +36,23 @@ async function remove(name: string) {
   }
 }
 
+async function update(oldName: string, newName: string) {
+  try {
+    const storage = await get();
+
+    const updated = storage.filter((task) => task.name != oldName);
+
+    await AsyncStorage.setItem(TASK_STORAGE_KEY, JSON.stringify(updated));
+
+    save({ name: newName });
+  } catch (error) {
+    throw new Error("Error on update task");
+  }
+}
+
 export const taskStorage = {
   get,
   save,
   remove,
+  update,
 };

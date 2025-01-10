@@ -2,8 +2,8 @@ import { View, Text, Alert } from "react-native";
 import { styles } from "./style";
 import { MaterialIcons } from "@expo/vector-icons";
 import { colors } from "@/styles/colors";
-import { TaskStorage, taskStorage } from "@/storage/link-storage";
-import { useState } from "react";
+import { taskStorage } from "@/storage/link-storage";
+import { router } from "expo-router";
 
 type Props = {
   name: string;
@@ -39,7 +39,12 @@ export function Task({ name }: Props) {
         </Text>
 
         <View style={styles.iconContainer}>
-          <MaterialIcons name="edit" size={25} color={colors.gray[800]} />
+          <MaterialIcons
+            name="edit"
+            size={25}
+            color={colors.gray[800]}
+            onPress={() => router.navigate(`/edit?name=${name}`)}
+          />
           <MaterialIcons
             name="delete"
             size={25}
