@@ -3,7 +3,10 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    width: "90%",
+    justifyContent: "center",
+    alignItems: "center",
+
+    width: "100%",
     height: 45,
 
     marginTop: 15,
@@ -11,14 +14,21 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: colors.gray[300],
   },
-  task: {
-    flex: 1,
+  taskContainer: {
     justifyContent: "space-between",
     alignItems: "center",
+    flexDirection: "row",
+
+    width: "95%",
   },
   taskTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 600,
   },
-  iconContainer: {},
+  iconContainer: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row",
+    gap: 10,
+  },
 });

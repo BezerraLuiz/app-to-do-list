@@ -11,8 +11,8 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
 
-    width: "80%",
-    height: "80%",
+    width: "85%",
+    height: "90%",
 
     borderRadius: 10,
     backgroundColor: colors.gray[200],
